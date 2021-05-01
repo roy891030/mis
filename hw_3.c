@@ -8,7 +8,14 @@ int main()
     printf("Input the number: ");
     int data = 0;
     scanf("%d", &data);
-    listSumOfPrimePairs(data);
+    if (data < 8 || data % 2 != 0)
+    {
+        printf("k must be an even number and >=8.\n");
+    }
+    else
+    {
+        listSumOfPrimePairs(data);
+    }
 }
 
 int IsPrime(int data) //判斷是否為prime如果是,return1,不是return0
