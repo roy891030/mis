@@ -11,6 +11,7 @@ int main()
     scanf("%d", &data);
     printf("The reverse number: ");
     reverseNum(data);
+    printf("\n");
 }
 void reverseNum(int data)
 {

@@ -51,7 +51,7 @@ void listSumOfPrimePairs(int data) //一個一個查找質數相加等於data的
     {
         if (IsPrime(data1) && IsPrime(data2))
         {
-            printf("%d = %d + %d\n", data, data1, data2);
+            printf("%4d = %4d + %-4d\n", data, data1, data2);
         }
         //printf("%d %d %d\n", data, data1, data2);
         data1 -= 1;
