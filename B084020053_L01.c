@@ -19,4 +19,5 @@ int main()
         b = r;
     }
     printf("gcd(%d,%d)=%d\n", c, d, a);
+    system("PAUSE");
 }
