@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-void StrCut(char *);
+void freqTrans(char *);
 void count(char *);
 int main()
 {
@@ -11,10 +11,10 @@ int main()
     // char input[40] = "accsdfc";
 
     printf("%s\n", input);
-    StrCut(input);
+    freqTrans(input);
 }
 
-void StrCut(char *str) //將input 字串分割成兩兩成對並用空字元隔開
+void freqTrans(char *str)
 {
     int i = 0;
     int j = 0;
@@ -22,20 +22,25 @@ void StrCut(char *str) //將input 字串分割成兩兩成對並用空字元隔�
     int max = 0;
     char first = ' ';
     char second = ' ';
-    for (i = 0; i < strlen(str); i++)
+    for (i = 0; i < strlen(str); i++) //雙層迴圈一一檢查字元
     {
         for (j = 0; j < strlen(str); j++)
         {
-            if (str[i] == str[j] && str[j + 1] == str[i + 1])
+            if (str[i] == str[j] && str[j + 1] == str[i + 1]) //判斷第i與i+1個字元是否有跟j與j+1字元相同
             {
-                count++;
+                count++; //相同則計數
             }
         }
 
-        if (count >= max)
+        if (count >= max) //如果計數大於剛剛比較大的計數時則記錄下來
         {
-            if (count == max && first < str[i])
+            if (count == max && first < str[i]) //判斷第一個字元與第二個字元的ascii，小的話才可以被印出來
             {
+                //啥都不做
+            }
+            else if (count == max && first == str[i] && second < str[i + 1])
+            {
+                //也啥都不做
             }
             else
             {
