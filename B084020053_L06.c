@@ -54,10 +54,10 @@ float arrayMin(int num, float *arr)
 int main(int argc, char *argv[])
 {
     int i;
-    float new[10] = {0};
+    float new[10];
     for (i = 1; i < argc; i++)
     {
-        new[i] = atof(argv[i + 1]);
+        new[i - 1] = atof(argv[i]);
     }
     int num = argc - 1;
 
@@ -66,8 +66,7 @@ int main(int argc, char *argv[])
     printf("max = %f\n", arrayMax(num, &new[0]));
     printf("min = %f\n", arrayMin(num, &new[0]));
 }
-/*寫完語法大致沒有偵測到問題，但是小弟使用的式linux ubuntu系統的電腦，
+/*
   在輸入./B084020053_L06.out 23 1 4 測資時terminal顯示：程式記憶體區段錯誤 (核心已傾印)
-  上網查，有人說可能是陣列過大造成記憶體錯亂而無法運行。但目前還不知道哪裡的陣列過大。
 
 */
