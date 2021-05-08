@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 //gcc B084020053_L06.c -o B084020053_L06.out -Wall
 //  ./B084020053_L06.out
 
