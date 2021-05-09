@@ -22,7 +22,7 @@ int main()
          {"Bob", 'A', 20, 80},
          {"Cat", 'B', 20, 50},
          {"Dog", 'A', 30, 20},
-         {"Dug", 'b', 20, 10000}};
+         {"Dug", 'B', 20, 100}};
     WhoBest(student);
     average(student);
 }
