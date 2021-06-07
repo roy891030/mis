@@ -1,5 +1,6 @@
 #include <stdio.h>
 #define X 5
+
 struct bankAccount
 {
     int id;
@@ -11,6 +12,7 @@ void deposit(struct bankAccount *);
 void withdraw(struct bankAccount *);
 void print(struct bankAccount *);
 int request(void);
+
 int main()
 {
     struct bankAccount account[X];
@@ -91,7 +93,7 @@ int request(void)
 {
     int re;
     printf("\nEnter request:\n");
-    printf("1 --- to  deposite.\n2 --- to withdraw.\n3 --- show users in our bank.\n");
+    printf("1 --- to deposite.\n2 --- to withdraw.\n3 --- show users in our bank.\n");
     scanf("%d", &re);
     return re;
 }
