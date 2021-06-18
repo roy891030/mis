@@ -1,1 +1,1 @@
- // printf("%ld", sizeof(*str1) / sizeof(str1[0]));
+        // }
